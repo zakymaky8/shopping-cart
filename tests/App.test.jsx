@@ -9,7 +9,7 @@ describe("", () => {
 })
 
 describe ("test app", () => {
-    it("tests", () => {
+    it("tests if the heading is in the document", () => {
         render(<App />)
         const h1 = screen.getByRole("heading");
         expect(h1).toBeInTheDocument()
