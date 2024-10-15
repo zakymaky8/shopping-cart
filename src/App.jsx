@@ -1,15 +1,17 @@
 import { Fragment } from 'react'
-import './App.css'
-import someStyle from "./App.module.css"
+import Header from './components/Header'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import route from './route'
+
+// const router = createBrowserRouter(route)
 
 function App() {
 
   return (
     <Fragment>
-      <div className={someStyle.someStyle}>
-          
-        <h1>Hello Vite</h1>
-
+      <div>
+        <Header />
+        {/* <RouterProvider router={router}/> */}
       </div>
     </Fragment>
   )

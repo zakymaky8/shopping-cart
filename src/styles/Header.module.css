@@ -1,0 +1,47 @@
+.navStyles {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.navStyles > * {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.imgStyle {
+    width: 40px;
+    height: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: min(30px);
+    background: rgb(9, 47, 47);
+    padding: 15px;
+    user-select: none;
+    box-shadow: 3px 3px 10px 2px black;
+    height: 91px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cartCount {
+     position: absolute;
+     top: -20px;
+     left: 60%;
+     border: 2px solid rgb(72, 255, 0);
+     border-radius: 50%;
+     width: 27px;
+     height: 27px;
+     text-align: center;
+     font-size: 16px;
+     padding: 3px;
+     color: rgb(255, 225, 225);
+     background: rgb(0, 0, 0);
+}
