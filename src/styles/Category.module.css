@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    background: rgb(3, 62, 20, 0.7);
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    list-style-type: none;
+    padding: 10px;
+}
+
+.categories button {
+    font-size: 15px;
+}
+
+
+.sort > select {
+    border: none;
+    background: rgb(31, 27, 27);
+    border-radius: 8px;
+    height: 30px;
+}

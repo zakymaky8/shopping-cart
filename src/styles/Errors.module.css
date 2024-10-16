@@ -1,0 +1,32 @@
+.fetchError {
+    background: #280f0f;
+    width: 100%;
+    height: 30px;
+
+}
+
+.fetchError > h1 {
+    color: #e70606;
+    font-size: 18px;
+    text-align: center;
+}
+
+.loadingSpinner {
+    width: 40px;
+    border-left: 10px solid red;
+    border-top: 10px solid greenyellow;
+    border-right: 10px solid blue;
+    border-bottom: 10px solid rgb(6, 255, 60);
+    border-radius: 50%;
+    height: 40px;
+    animation: spinner 0.8s infinite;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

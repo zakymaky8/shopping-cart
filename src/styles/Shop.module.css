@@ -1,0 +1,44 @@
+.shopContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.search > input {
+    height: 40px;
+    align-self: center;
+    width: 250px;
+    background: rgb(3, 160, 97);
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.search > input::placeholder {
+    color: rgb(9, 7, 7, 0.4);
+}
+
+
+.search > button {
+    height: 40px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    padding: 40px;
+
+}

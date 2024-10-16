@@ -3,6 +3,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-right: 20px;
 }
 .navStyles > * {
     font-size: 20px;
@@ -23,8 +24,9 @@
     background: rgb(9, 47, 47);
     padding: 15px;
     user-select: none;
-    box-shadow: 3px 3px 10px 2px black;
-    height: 91px;
+    box-shadow: inset 6px 6px 10px 5px black;
+    min-height: 130px;
+    border: 10px solid rgb(35, 63, 54);
 }
 
 .cart {
@@ -37,11 +39,25 @@
      left: 60%;
      border: 2px solid rgb(72, 255, 0);
      border-radius: 50%;
-     width: 27px;
-     height: 27px;
+     width: 26px;
+     height: 26px;
      text-align: center;
-     font-size: 16px;
+     font-size: 15.2px;
      padding: 3px;
      color: rgb(255, 225, 225);
      background: rgb(0, 0, 0);
+}
+
+.active {
+    color: gold;
+}
+
+
+.activeSty {
+    /* background: rgb(3, 119, 36); */
+    color: gold;
+}
+.activeSty:focus {
+    border: none;
+    outline: none;
 }
