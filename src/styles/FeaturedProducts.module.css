@@ -12,9 +12,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .cta {
     background: rgb(55, 39, 4);
-    margin: 20px
+    margin: 20px;
+    height: 50px;
 }

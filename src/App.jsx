@@ -1,14 +1,15 @@
-import { Fragment } from 'react'
+// import { Fragment } from 'react'
 import Header from './components/Header'
 import { Outlet } from 'react-router-dom'
+import style from "./styles/App.module.css"
 
 function App() {
 
   return (
-    <Fragment>
+    <div className={style.container}>
         <Header />
         <Outlet />
-    </Fragment>
+    </div>
   )
 }
 

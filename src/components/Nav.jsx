@@ -7,9 +7,9 @@ export default function Nav() {
   return (
     <div>
       <ul className={navStyle.navStyles} data-testid = "navs-test">
-        <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/log-in">Log in</NavLink>
         <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/">Home</NavLink>
         <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/shop">Shop</NavLink>
+        <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/log-in">Log in</NavLink>
         <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/">
             <div className={navStyle.cart}>
               <img className={navStyle.imgStyle} src="../../src/assets/images/cart.png" alt="cart" />

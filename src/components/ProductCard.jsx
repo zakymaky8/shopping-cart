@@ -19,8 +19,8 @@ export default function ProductCard({id, url, title, price}) {
       </div>
 
       <div className={style.btns}>
-        <Link to={"/detail/"+id} ><button>See Detail</button></Link>
-        <button>Add To Cart</button>
+        <Link to={"/product-detail/"+id} ><button>See Detail</button></Link>
+        <button>Add To Cart 🛒</button>
       </div>
 
     </div>

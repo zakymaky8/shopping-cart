@@ -28,9 +28,9 @@ export default function Category({ setCategory, category }) {
     getCategories()
   }, [])
 
-  function getUrl(cate) {
+  function getUrl(categoType) {
     const baseUrl = "https://fakestoreapi.com/products/"
-    switch (cate) {
+    switch (categoType) {
       case "electronics":
         return baseUrl + "category/electronics";
       case "jewelery":

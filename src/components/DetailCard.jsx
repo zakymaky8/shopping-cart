@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import FetchError from "./FetchError";
 import Loading from "./Loading";
+import style from "../styles/ProductCard.module.css"
 
 function DetailCard() {
 
@@ -31,13 +32,28 @@ function DetailCard() {
         return <Loading />
     } else {
         return (
-            <div>
-                <img style={{width:"200px"}} src={data.image} alt={data.title} />
+            <div className={style.detailCard}>
+                <img src={data.image} alt={data.title} />
                 <h1>{data.title}</h1>
-                <p>{data.description}</p>
+                <span
+                    style={{alignSelf: "flex-start", color: "yellow"}}>
+                        Price: {"$ " + data.price}
+                </span>
+
+                <div className={style.desc}>
+                    <h2>Description</h2>
+                    <p>{data.description}</p>
+                </div>
                 <div>
-                    <p>rating: {data.rating.rate}</p>
-                    <p>count: {data.rating.count}</p>
+                    <p className={style.categoName} >{data.category.toUpperCase()}</p>
+                </div>
+                <div className={style.rating}>
+                    <p>Rating: {data.rating.rate}</p>
+                    <p>Reviews: {data.rating.count}</p>
+                </div>
+                <div className={style.cta}>
+                    <Link to="/shop"><button>👈 See Others</button></Link>
+                    <button>Add To Cart 🛒</button>
                 </div>
             </div>
         )

@@ -6,35 +6,37 @@ import Products from "./Products";
 
 
 export default function Shop() {
-  
+
   const [category, setCategory] = useState({
     type: "all",
     sort: "shuffled",
     url: "https://fakestoreapi.com/products"
   })
-  
-  // useEffect( () => {
-  //   async function getProducts() {
-  //     const url = category.url
-  //     try {
-  //       const response = await fetch(url, {mode: "cors"})
-  //       const json = await response.json()
-  //       console.log(json)
-  //     }
-  //     catch (err) {
-  //       console.log(err.message)
-  //     }
-  //   }
-  //   getProducts("")
-  // }, [category])
+
+  const [serkey, setSerkey ] = useState("")
+  const [value, setValue] = useState("")
+
   return (
     <div className={styles.shopContainer}>
       <div className={styles.search}>
-        <input type="search"  placeholder="search in products"/>
-        <button>🔍</button>
+        <input
+          type="search"
+          placeholder="search in products"
+          value={value}
+          onChange={(e)=>setValue(e.target.value)}
+          />
+        <button onClick={() => setSerkey(value)}>🔍</button>
       </div>
-      <Category setCategory={setCategory} category={category}/>
-      <Products setCategory={setCategory} category={category}/>
+      <Category
+          setCategory={setCategory}
+          category={category}/>
+
+      <Products
+        setCategory={setCategory}
+        category={category}
+        serkey={serkey}
+        setSerkey={ setSerkey }
+      />
     </div>
   )
 }

@@ -29,7 +29,7 @@ const route = [
                 element: <Login />
             },
             {
-                path: "/detail/:productId",
+                path: "/product-detail/:productId",
                 element: <DetailCard />
             }
         ]

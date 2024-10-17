@@ -1,14 +1,12 @@
 .container {
     display: flex;
     flex-direction: column;
-    /* border: 12px groove rgb(1, 2, 2); */
     align-items: center;
     width: 400px;
     gap: 20px;
     padding: 15px;
     border-radius: 20px;
     box-shadow: inset 3px 3px 6px 2px black;
-    /* background: rgb(0, 0, 0); */
 
 }
 
@@ -42,7 +40,7 @@
 
 
 .btns > button:not(first-child) {
-    background: yellowgreen;
+    background: rgb(72, 96, 24);
 }
 
 .counter {
@@ -75,4 +73,60 @@
     font-size: 15px;
     font-weight: 100;
     font-family: serif;
+}
+
+
+.detailCard {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    box-shadow: 4px 4px 6px 4px black;
+    align-self: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    gap: 20px;
+}
+.detailCard img {
+    width: 95%;
+    border-radius: 10px;
+    height: 420px;
+}
+
+.rating {
+    display: flex;
+    align-self: flex-start;
+    gap: 10px;
+    color: gold;
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.cta button {
+    height: 50px;
+    width: 150px;
+}
+.cta > button:not(:first-child){
+    background: rgb(72, 96, 24)
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-style: italic;
+}
+
+.desc p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.categoName {
+    color: rgb(71, 204, 71);
+    font-style: italic;
 }

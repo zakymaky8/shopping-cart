@@ -6,16 +6,19 @@ import Loading from "./Loading";
 import PropTypes from "prop-types";
 
 
-function Products({ category }) {
+export default function Products({ category, serkey }) {
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+
   useEffect(() => {
     async function getProducts() {
       try {
         const response = await fetch(category.url, {mode: "cors"})
         const json = await response.json()
-        const sortedData = sortData(json)
+        const sortedData = sortData(serkey ? searchResult(json) : json)
+        console.log(sortedData)
         setProducts(sortedData)
       } catch(err) {
         setError(err.message)
@@ -25,7 +28,13 @@ function Products({ category }) {
     }
     getProducts()
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [category])
+  }, [category, serkey]) // set search param change as refresher
+
+  function searchResult(data) {
+    const searchResults = data.map(d=>(serkey.toLowerCase().split("").every(l => d.title.toLowerCase().includes(l))) ? d : null)
+    return searchResults.filter(e => e!=null)
+  }
+
 
   function sortData(data) {
     if (category.sort === "Z-A") {
@@ -50,13 +59,19 @@ function Products({ category }) {
   return (
     <div className={styles.products}>
       {
-        products.map(product=> {
-          return <ProductCard id={product.id} key={product.id} url={product.image} title={product.title} price={parseInt(product.price)}/>
-        })
+        products.length &&
+        products.map(product=> <ProductCard
+                id={product.id}
+                key={product.id}
+                url={product.image}
+                title={product.title}
+                price={parseInt(product.price)}/>) || <h1> No result!</h1>
       }
     </div>
   )
 }
+
+
 
 Products.propTypes = {
   category: PropTypes.shape({
@@ -64,8 +79,6 @@ Products.propTypes = {
     sort: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
   }),
-  setCategory: PropTypes.func.isRequired
+  setCategory: PropTypes.func.isRequired,
+  serkey: PropTypes.string.isRequired
 }
-
-
-export default Products
