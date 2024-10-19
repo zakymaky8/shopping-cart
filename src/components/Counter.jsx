@@ -1,11 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import style from  "../styles/ProductCard.module.css"
 
 
-export default function Counter() {
-    const [count, setCount] = useState(1)
-    
+// eslint-disable-next-line react/prop-types
+export default function Counter({count, setCount}) {
+    // const [count, setCount] = useState(1)
     return (
         <div className={style.counter}>
             <button onClick={() => setCount(count <= 1 ? 1 : count - 1)}>-</button>

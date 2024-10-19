@@ -1,4 +1,6 @@
 import App from "./App"
+import Cart from "./components/Cart"
+import Ceckout from "./components/Ceckout"
 import DetailCard from "./components/DetailCard"
 import DisplayImages from "./components/DisplayImages"
 import Error from "./components/Error"
@@ -29,8 +31,16 @@ const route = [
                 element: <Login />
             },
             {
-                path: "/product-detail/:productId",
+                path: "/shop/product-detail/:productId",
                 element: <DetailCard />
+            },
+            {
+                path: "/shop/cart",
+                element: <Cart />
+            },
+            {
+                path: "/shop/cart/checkout",
+                element: <Ceckout />
             }
         ]
     }

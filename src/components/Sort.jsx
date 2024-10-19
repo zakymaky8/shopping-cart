@@ -5,7 +5,7 @@ import styles from "../styles/Category.module.css"
 export default function Sort({ category, setCategory }) {
   return (
         <div className={styles.sort}>
-          <label htmlFor="sort">Sort by </label>
+          <label htmlFor="sort">🗂️ Sort by </label>
           <select name="sorts" id="sort" onChange={(e)=>setCategory({...category, sort: e.target.value})}>
             <option value="shuffled">shuffled</option>
             <option value="A-Z">A-Z</option>

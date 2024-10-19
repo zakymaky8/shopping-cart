@@ -18,7 +18,6 @@ export default function Products({ category, serkey }) {
         const response = await fetch(category.url, {mode: "cors"})
         const json = await response.json()
         const sortedData = sortData(serkey ? searchResult(json) : json)
-        console.log(sortedData)
         setProducts(sortedData)
       } catch(err) {
         setError(err.message)
@@ -28,7 +27,7 @@ export default function Products({ category, serkey }) {
     }
     getProducts()
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [category, serkey]) // set search param change as refresher
+  }, [category, serkey])
 
   function searchResult(data) {
     const searchResults = data.map(d=>(serkey.toLowerCase().split("").every(l => d.title.toLowerCase().includes(l))) ? d : null)
@@ -37,17 +36,11 @@ export default function Products({ category, serkey }) {
 
 
   function sortData(data) {
-    if (category.sort === "Z-A") {
-      return data.sort((a, b)=> a.title < b.title ? 1 : a.title > b.title ? -1 : 0)
-    } else if (category.sort === "A-Z") {
-      return data.sort((a, b)=> a.title < b.title ? -1 : a.title > b.title ? 1 : 0)
-    } else if (category.sort === "lowest price") {
-      return data.sort((a, b)=> +a.price - +b.price)
-    } else if (category.sort === "highest price") {
-      return data.sort((a, b)=> +b.price - +a.price)
-    } else {
-      return data
-    }
+    if (category.sort === "Z-A") return data.sort((a, b)=> a.title < b.title ? 1 : a.title > b.title ? -1 : 0)
+    else if (category.sort === "A-Z") return data.sort((a, b)=> a.title < b.title ? -1 : a.title > b.title ? 1 : 0)
+    else if (category.sort === "lowest price") return data.sort((a, b)=> +a.price - +b.price)
+    else if (category.sort === "highest price") return data.sort((a, b)=> +b.price - +a.price)
+    else return data
   }
 
 

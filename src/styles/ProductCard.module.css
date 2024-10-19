@@ -66,6 +66,7 @@
 .counter > button:not(:first-child) {
     background: rgb(12, 44, 12);
     height: 40px;
+    width: 50px;
     border-radius: 0px;
 }
 
@@ -104,7 +105,10 @@
 .cta {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 100%;
+    align-self: center;
 }
 .cta button {
     height: 50px;

@@ -27,6 +27,7 @@ export default function Category({ setCategory, category }) {
     }
     getCategories()
   }, [])
+  const categoEmoji = ["📱", "💍", "👖", "👗"];
 
   function getUrl(categoType) {
     const baseUrl = "https://fakestoreapi.com/products/"
@@ -51,12 +52,12 @@ export default function Category({ setCategory, category }) {
     <div className={styles.container}>
       <ul className={styles.categories}>
           <li>
-            <button className={category.type === "all" ? activeStyle.activeSty : null} onClick={()=>setCategory({...category, type: "all", url: getUrl("all")})}>all</button>
+            <button className={category.type === "all" ? activeStyle.activeSty : null} onClick={()=>setCategory({...category, type: "all", url: getUrl("all")})}>♾️ all</button>
           </li>
           {categories.map((catego, index)=> {
               return (
                 <li key={index}>
-                  <button className={category.type === catego ? activeStyle.activeSty : null} onClick={()=>setCategory({...category, type: catego, url: getUrl(catego)})}>{catego}</button>
+                  <button className={category.type === catego ? activeStyle.activeSty : null} onClick={()=>setCategory({...category, type: catego, url: getUrl(catego)})}>{categoEmoji[index] + " " +catego}</button>
                 </li>
               )
             })}
