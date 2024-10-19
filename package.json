@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest --watch"
+    "test": "vitest --watch",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
