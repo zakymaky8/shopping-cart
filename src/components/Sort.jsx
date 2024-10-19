@@ -18,6 +18,7 @@ export default function Sort({ category, setCategory }) {
 }
 
 
+
 Sort.propTypes = {
   category: PropTypes.shape({
     type: PropTypes.string.isRequired,
