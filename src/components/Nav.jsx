@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import navStyle from "../styles/Header.module.css"
 import { useContext, useEffect } from "react";
 import { CartContext } from "../App";
-
+import cartImg from"../../src/assets/images/cart.png"
 export default function Nav() {
 
   const cartInfo = useContext(CartContext);
@@ -23,7 +23,7 @@ export default function Nav() {
         <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/log-in">🔑Log in</NavLink>
         <NavLink className={({isActive}) => isActive ? navStyle.active : ""} to="/shop/cart">
             <div className={navStyle.cart}>
-              <img className={navStyle.imgStyle} src="../../src/assets/images/cart.png" alt="cart" />
+              <img className={navStyle.imgStyle} src={cartImg} alt="cart" />
               {total !==0 &&  <span className={navStyle.cartCount}>{total}</span>}
             </div>
         </NavLink>
