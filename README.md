@@ -24,13 +24,13 @@ Classic Mock Shopping cart built using React + Vite and packaged with fetching, 
 
 ## Features
 - You might get less out of what has to be included in normal ecommerce website below are features already included in this website
-- This website got a home page with ad visuals for users to get in to shopping image carousel showing which types of products they may shop
-- ``image carousel``: shows which types of products they may shop, next and back button with it
+- This website got a home page with ad visuals for users to get in to shopping
+- ``image carousel``: shows which types of products they may shop, forth and back buttons with it
 - ``Featured products``: random products out of store's api end point  and ``call to action`` leading to shopping section.
-- ``Shopping section``: There is a bar to categorise which types of product you want to see and assortment on how you want to see it price-wise, alphabetically, or as it it is come.
-- ``Searching products``: This feature might be a little poor when it comes to the algorithms efficiency, as it tries to find products which containes letters used as searching keyword and finally tries to match with products title, simply it finds a product contains a letter in search keys than a word or related terms.
+- ``Shopping section``: There is a bar to categorize which type of product you want to see and assortment on how you want to see it:- price-wise, alphabetically, or as it it is come.
+- ``Searching products``: This feature might be a little poor when it comes to the algorithm's efficiency, as it tries to find products which containes letters used as searching keyword and finally tries to match with products title. Simply, it finds a product contains a letter in search keys arbitrarily than a word or related terms.
 - And there is login and checkout forms you can skip, or work on it to extend its function
-- And like an ordinary shopping site there is a cart section where the selected products live. counting and resetting are one of things tied with the cart items
+- And like an ordinary shopping site there is a cart section where the selected products live. Counting and resetting are one of things tied with the cart items
 
 ## Screenshot
 
